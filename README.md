@@ -11,6 +11,8 @@ steps:
 4. enable developer mode
 5. select load unpacked
 6. select unzipped file
+
+<br><br>
 OPEN NEW TAb. TADA!!!
 ### Demo Screenshot
 ![looks like this](screenshots/demo.png)
