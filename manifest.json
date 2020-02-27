@@ -1,0 +1,16 @@
+{
+  "name": "Word Clock",
+  "version": "0.0.1",
+  "description": "Time is on words.",
+  "manifest_version": 2,
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions":[
+    "activeTab"
+  ],
+  "icons":{
+    "128": "screenshots/logo.png"
+  }
+}
