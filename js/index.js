@@ -1,10 +1,10 @@
-function gameWorld() {
+(function wordClockLoop() {
   const wrapper = document.getElementById('root');
-  let child = wrapper.lastElementChild;  
-  while (child) { 
-    wrapper.removeChild(child); 
-    child = wrapper.lastElementChild; 
-  } 
+  let child = wrapper.lastElementChild;
+  while (child) {
+    wrapper.removeChild(child);
+    child = wrapper.lastElementChild;
+  }
   let innerDiv = document.createElement('div');
   innerDiv.setAttribute('id', 'innerDiv');
   innerDiv.style.width = '450px';
@@ -49,19 +49,17 @@ function gameWorld() {
   let ctx = canvas.getContext('2d');
   ctx.strokeStyle = '#101314';
 
-  for (let i = 1; i < 5; i++){
+  for (let i = 1; i < 5; i++) {
     ctx.beginPath();
     ctx.arc(190 + (18 * i), 20, 5, 0, 2 * Math.PI);
     if (i <= new Date().getMinutes() % 5) {
       ctx.fillStyle = '#fff';
       ctx.fill();
-    } 
+    }
     ctx.stroke();
   }
    
-  innerDiv.appendChild(canvas);  
+  innerDiv.appendChild(canvas);
   wrapper.appendChild(innerDiv);
-  setTimeout(gameWorld, 5000);
-}
-
-gameWorld();
+  setTimeout(wordClockLoop, 5000);
+})();
